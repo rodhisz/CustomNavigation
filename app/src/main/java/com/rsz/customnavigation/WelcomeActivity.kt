@@ -19,9 +19,11 @@ class WelcomeActivity : AppCompatActivity() {
         sph = SharedPreference(this)
         binding.btnLogin.setOnClickListener {
             sph.setStatusLogin(true)
-            Toast.makeText(this, "Selamat Datang", Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this, MainActivity::class.java))
-            finish()
+            startActivity(Intent(this, LoginActivity::class.java))
+
+//            Toast.makeText(this, "Selamat Datang", Toast.LENGTH_SHORT).show()
+//            startActivity(Intent(this, MainActivity::class.java))
+//            finish()
         }
     }
 }
